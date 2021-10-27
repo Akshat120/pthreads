@@ -29,6 +29,8 @@ int main()
 {
     srand(time(0));
     int r=2,w=2;
+    pthread_mutex_init( &db_lock, NULL);
+    pthread_mutex_init( &mutex, NULL);
     pthread_t readers[r],writers[w];
     for(int i=0;i<r;i++)
     {
