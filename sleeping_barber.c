@@ -83,7 +83,6 @@ void *client(void *param) {
 		   sem_wait(&sem_barber);
 		   printf("Client: Thread %u getting a haircut\n",(unsigned int)pthread_self());
 	  }
-      Max value from command line. */
 	  waittime = (rand() % clientWait) + 1;
 	  printf("Client: Thread %u waiting %d seconds before attempting next haircut\n",(unsigned int)pthread_self(),waittime);
 	  sleep(waittime);
